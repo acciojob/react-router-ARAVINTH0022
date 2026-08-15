@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import Navigation from './Navigation';
+import UserList from './UserList';
+import UserDetails from './UserDetails';
 import '../styles/App.css';
 
 const App = () => {
@@ -10,10 +9,9 @@ const App = () => {
     <Router>
       <div id="main">
         {/* Do not remove the main div */}
-        <Navigation />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+          <Route exact path="/" component={UserList} />
+          <Route path="/users/:id" component={UserDetails} />
         </Switch>
       </div>
     </Router>
